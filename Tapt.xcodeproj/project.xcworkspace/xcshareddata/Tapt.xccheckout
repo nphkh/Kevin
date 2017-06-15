@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>79B159FB-507F-44D7-B2D9-44A57E724E2F</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>413d3552-db19-4ca0-b71c-8e73f7b09a71++5804</key>
+		<string>svn://ec2-50-17-167-229.compute-1.amazonaws.com/Showt/trunk/Showt/libcommon/JSON</string>
+	</dict>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>413d3552-db19-4ca0-b71c-8e73f7b09a71++5804</key>
+		<string>JSON/</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>413d3552-db19-4ca0-b71c-8e73f7b09a71++5804</key>
+		<string>svn://ec2-50-17-167-229.compute-1.amazonaws.com</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://ec2-50-17-167-229.compute-1.amazonaws.com/Showt/trunk/Showt/libcommon/JSON</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>413d3552-db19-4ca0-b71c-8e73f7b09a71++5804</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>413d3552-db19-4ca0-b71c-8e73f7b09a71++5804</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JSON</string>
+		</dict>
+	</array>
+</dict>
+</plist>

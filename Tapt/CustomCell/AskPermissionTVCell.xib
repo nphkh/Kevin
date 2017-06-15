@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AskPermissionTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="41"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-Qf-nuH">
+                    <rect key="frame" x="8" y="8" width="161" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-u9-wRz" userLabel="btnColor">
+                    <rect key="frame" x="177" y="6" width="30" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="RA4-Rd-BZe"/>
+                        <constraint firstAttribute="height" constant="30" id="dQs-Kf-8d1"/>
+                    </constraints>
+                    <state key="normal" image="checkmark-unsel.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="checkmark-sel.png"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wq-MB-rg6">
+                    <rect key="frame" x="0.0" y="40" width="220" height="2"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8Z-VP-Hcc" userLabel="btnClick">
+                    <rect key="frame" x="0.0" y="0.0" width="220" height="41"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClickToChangeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kcc-Bx-aSb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fZ0-Qf-nuH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="6cD-6V-kQS"/>
+                <constraint firstAttribute="bottom" secondItem="d8Z-VP-Hcc" secondAttribute="bottom" id="EE9-Lf-K2B"/>
+                <constraint firstAttribute="bottom" secondItem="fZ0-Qf-nuH" secondAttribute="bottom" constant="9" id="FeU-7M-hjH"/>
+                <constraint firstItem="d8Z-VP-Hcc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="K2Z-Pb-AdE"/>
+                <constraint firstItem="eqm-u9-wRz" firstAttribute="leading" secondItem="fZ0-Qf-nuH" secondAttribute="trailing" constant="8" id="MIK-I4-k9n"/>
+                <constraint firstItem="fZ0-Qf-nuH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Rnb-32-qv1"/>
+                <constraint firstAttribute="trailing" secondItem="d8Z-VP-Hcc" secondAttribute="trailing" id="WeS-bb-2rX"/>
+                <constraint firstItem="eqm-u9-wRz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="6" id="du8-T9-evr"/>
+                <constraint firstItem="d8Z-VP-Hcc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gMk-rd-gua"/>
+                <constraint firstAttribute="trailing" secondItem="eqm-u9-wRz" secondAttribute="trailing" constant="13" id="srP-eG-aog"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnClick" destination="d8Z-VP-Hcc" id="AVu-WM-DvD"/>
+                <outlet property="btnColor" destination="eqm-u9-wRz" id="Pla-SQ-gWV"/>
+                <outlet property="lblField" destination="fZ0-Qf-nuH" id="d26-wl-Yj8"/>
+            </connections>
+            <point key="canvasLocation" x="97" y="241.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark-sel.png" width="23" height="23"/>
+        <image name="checkmark-unsel.png" width="23" height="23"/>
+    </resources>
+</document>

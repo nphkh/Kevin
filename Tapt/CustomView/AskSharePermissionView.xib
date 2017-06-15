@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AskSharePermissionView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" alpha="0.74999999999999978" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-WB-9LT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="btnHideAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="SEV-pl-lOR"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWH-N9-iND">
+                    <rect key="frame" x="97" y="205" width="221" height="326"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6T-X7-vPY">
+                            <rect key="frame" x="0.0" y="0.0" width="221" height="36"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="xLp-wl-IqN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VeR-Ze-KMT">
+                            <rect key="frame" x="0.0" y="36" width="221" height="249"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="iN0-l3-epB" id="HOU-IQ-TCl"/>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="M4K-gr-88s"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6o-IA-leE">
+                            <rect key="frame" x="0.0" y="288" width="110" height="36"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="OqX-eo-I81"/>
+                                <constraint firstAttribute="height" constant="36" id="SWh-Rv-97B"/>
+                            </constraints>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnOkAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sn9-a5-xUa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-YW-dFr">
+                            <rect key="frame" x="111" y="288" width="110" height="36"/>
+                            <color key="backgroundColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="SPy-ii-ebn"/>
+                                <constraint firstAttribute="height" constant="36" id="fOi-dL-XdL"/>
+                            </constraints>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="tOy-FN-1Je"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8G0-YW-dFr" secondAttribute="trailing" id="3g2-Eb-kzC"/>
+                        <constraint firstItem="d6T-X7-vPY" firstAttribute="leading" secondItem="SWH-N9-iND" secondAttribute="leading" id="6S3-ii-VWg"/>
+                        <constraint firstAttribute="trailing" secondItem="d6T-X7-vPY" secondAttribute="trailing" id="B59-GL-Qb3"/>
+                        <constraint firstItem="VeR-Ze-KMT" firstAttribute="top" secondItem="d6T-X7-vPY" secondAttribute="bottom" id="FEs-01-zDq"/>
+                        <constraint firstItem="d6T-X7-vPY" firstAttribute="top" secondItem="SWH-N9-iND" secondAttribute="top" id="GjK-Im-DVK"/>
+                        <constraint firstAttribute="height" constant="326" id="MWq-1h-1MJ"/>
+                        <constraint firstAttribute="bottom" secondItem="S6o-IA-leE" secondAttribute="bottom" constant="2" id="VOl-BY-RvC"/>
+                        <constraint firstItem="8G0-YW-dFr" firstAttribute="top" secondItem="VeR-Ze-KMT" secondAttribute="bottom" constant="3" id="Zp7-sp-LMh"/>
+                        <constraint firstItem="S6o-IA-leE" firstAttribute="leading" secondItem="SWH-N9-iND" secondAttribute="leading" id="bup-h5-rvC"/>
+                        <constraint firstItem="VeR-Ze-KMT" firstAttribute="leading" secondItem="SWH-N9-iND" secondAttribute="leading" id="dlx-co-Jer"/>
+                        <constraint firstAttribute="trailing" secondItem="VeR-Ze-KMT" secondAttribute="trailing" id="g6O-Mh-jeC"/>
+                        <constraint firstAttribute="bottom" secondItem="8G0-YW-dFr" secondAttribute="bottom" constant="2" id="qDz-iO-n9V"/>
+                        <constraint firstAttribute="width" constant="221" id="qXn-kq-s0y"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="SWH-N9-iND" secondAttribute="centerY" id="9ir-2W-Q55"/>
+                <constraint firstAttribute="bottom" secondItem="Erb-WB-9LT" secondAttribute="bottom" id="GA5-hY-mku"/>
+                <constraint firstItem="Erb-WB-9LT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Gr6-hJ-Dwb"/>
+                <constraint firstAttribute="centerX" secondItem="SWH-N9-iND" secondAttribute="centerX" id="SV5-ww-dnO"/>
+                <constraint firstAttribute="trailing" secondItem="Erb-WB-9LT" secondAttribute="trailing" id="cY3-cv-c85"/>
+                <constraint firstItem="Erb-WB-9LT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ylo-HC-Zvy"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <connections>
+                <outlet property="tblViewField" destination="VeR-Ze-KMT" id="575-6B-pUp"/>
+                <outlet property="viewSubDialoge" destination="SWH-N9-iND" id="bQN-ef-Ufh"/>
+            </connections>
+            <point key="canvasLocation" x="262" y="438"/>
+        </view>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellField" rowHeight="41" id="bEy-NN-21e" customClass="AskPermissionTVCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bEy-NN-21e" id="PQs-eB-iMO">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhc-o1-wI8">
+                        <rect key="frame" x="8" y="9" width="269" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69R-Nh-jo3" userLabel="btnClick">
+                        <rect key="frame" x="0.0" y="2" width="320" height="38"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="btnClickToChangeAction:" destination="bEy-NN-21e" eventType="touchUpInside" id="yX2-O9-wpE"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJ5-IL-THo" userLabel="btnColor">
+                        <rect key="frame" x="285" y="5" width="30" height="30"/>
+                        <color key="backgroundColor" red="1" green="0.88374125869999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.22352941179999999" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnClick" destination="69R-Nh-jo3" id="Ekh-JU-5Ag"/>
+                <outlet property="btnColor" destination="qJ5-IL-THo" id="R9O-Hz-ZX7"/>
+                <outlet property="lblField" destination="Qhc-o1-wI8" id="l3R-kP-sgw"/>
+            </connections>
+            <point key="canvasLocation" x="706" y="490.5"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

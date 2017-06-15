@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MyriadPro-Regular.otf">
+            <string>MyriadPro-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TagSelectionView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IM8-se-jqT">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="n0q-2D-Npr">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        </imageView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sr-v9-6pt">
+                            <rect key="frame" x="15" y="17" width="570" height="270"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZC-hO-T7O">
+                                    <rect key="frame" x="0.0" y="0.0" width="570" height="270"/>
+                                    <color key="backgroundColor" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="0.95999999999999996" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="270" id="cfv-5u-aSQ"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="CZC-hO-T7O" firstAttribute="top" secondItem="9Sr-v9-6pt" secondAttribute="top" id="33M-3M-BNV"/>
+                                <constraint firstItem="CZC-hO-T7O" firstAttribute="leading" secondItem="9Sr-v9-6pt" secondAttribute="leading" id="EvU-xT-okf"/>
+                                <constraint firstAttribute="bottom" secondItem="CZC-hO-T7O" secondAttribute="bottom" id="J6m-Mc-PRH"/>
+                                <constraint firstAttribute="centerX" secondItem="CZC-hO-T7O" secondAttribute="centerX" id="ROB-W9-bGu"/>
+                                <constraint firstAttribute="height" constant="270" id="YY2-xM-1e3"/>
+                                <constraint firstAttribute="trailing" secondItem="CZC-hO-T7O" secondAttribute="trailing" id="dgJ-oY-oRc"/>
+                            </constraints>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhS-wh-HvQ">
+                            <rect key="frame" x="275" y="300" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="ljE-IG-oR1"/>
+                                <constraint firstAttribute="width" constant="60" id="v3w-bH-qMg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="16"/>
+                            <state key="normal" title="Search">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="btnSearchAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="w84-jO-h8f"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="LhS-wh-HvQ" secondAttribute="centerX" constant="-5" id="9zf-mF-3TU"/>
+                        <constraint firstAttribute="trailing" secondItem="9Sr-v9-6pt" secondAttribute="trailing" constant="15" id="A7w-0M-uh6"/>
+                        <constraint firstAttribute="trailing" secondItem="n0q-2D-Npr" secondAttribute="trailing" id="Jnv-wF-hsG"/>
+                        <constraint firstItem="n0q-2D-Npr" firstAttribute="leading" secondItem="IM8-se-jqT" secondAttribute="leading" id="LoQ-wV-aIC"/>
+                        <constraint firstItem="9Sr-v9-6pt" firstAttribute="leading" secondItem="IM8-se-jqT" secondAttribute="leading" constant="15" id="Lz0-fn-3MR"/>
+                        <constraint firstItem="n0q-2D-Npr" firstAttribute="top" secondItem="IM8-se-jqT" secondAttribute="top" id="Trw-Bc-pNW"/>
+                        <constraint firstItem="LhS-wh-HvQ" firstAttribute="top" secondItem="9Sr-v9-6pt" secondAttribute="bottom" constant="13" id="WTU-dT-E0c"/>
+                        <constraint firstAttribute="bottom" secondItem="n0q-2D-Npr" secondAttribute="bottom" id="qAW-PY-2AF"/>
+                        <constraint firstItem="9Sr-v9-6pt" firstAttribute="top" secondItem="IM8-se-jqT" secondAttribute="top" constant="17" id="sSm-jX-jm7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IM8-se-jqT" secondAttribute="bottom" id="2iz-Dg-SYy"/>
+                <constraint firstItem="IM8-se-jqT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9S7-96-JDg"/>
+                <constraint firstItem="IM8-se-jqT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jWN-9C-L0Q"/>
+                <constraint firstAttribute="trailing" secondItem="IM8-se-jqT" secondAttribute="trailing" id="vtU-jL-Sxm"/>
+            </constraints>
+            <connections>
+                <outlet property="ViewForSearchTag" destination="CZC-hO-T7O" id="vb2-gY-Oxz"/>
+                <outlet property="btnSearch" destination="LhS-wh-HvQ" id="fgj-6b-JIv"/>
+                <outlet property="scrlTagView" destination="9Sr-v9-6pt" id="yGC-0L-W2h"/>
+                <outlet property="tagViewHeight" destination="cfv-5u-aSQ" id="OEU-ON-fcS"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="bgImage.png" width="320" height="568"/>
+    </resources>
+</document>

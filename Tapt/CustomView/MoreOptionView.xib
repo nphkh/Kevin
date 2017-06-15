@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MoreOptionView">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="87"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVi-fO-EYb">
+                    <rect key="frame" x="0.0" y="0.0" width="149" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="9rA-0t-crx"/>
+                    </constraints>
+                    <state key="normal" title="By Name">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnByNameAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="SgJ-SE-TaQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UY-Ro-8Hu">
+                    <rect key="frame" x="0.0" y="43" width="149" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8oX-jk-Gqr"/>
+                    </constraints>
+                    <state key="normal" title="By Surname">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnBySurNameAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="dzH-jA-1dK"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fj7-Pm-EQm">
+                    <rect key="frame" x="0.0" y="43" width="149" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="zGk-j9-nht"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9UY-Ro-8Hu" secondAttribute="bottom" id="5Hr-hy-RRd"/>
+                <constraint firstItem="IVi-fO-EYb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8cl-2i-3RR"/>
+                <constraint firstItem="9UY-Ro-8Hu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QNh-Ap-h14"/>
+                <constraint firstItem="Fj7-Pm-EQm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZJc-wp-IkS"/>
+                <constraint firstAttribute="trailing" secondItem="9UY-Ro-8Hu" secondAttribute="trailing" id="ZM0-v7-CRw"/>
+                <constraint firstAttribute="trailing" secondItem="IVi-fO-EYb" secondAttribute="trailing" id="a2r-c2-hkb"/>
+                <constraint firstItem="IVi-fO-EYb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hgw-vr-ABe"/>
+                <constraint firstAttribute="centerY" secondItem="Fj7-Pm-EQm" secondAttribute="centerY" id="lFG-mn-IpF"/>
+                <constraint firstAttribute="trailing" secondItem="Fj7-Pm-EQm" secondAttribute="trailing" id="xCX-wP-R09"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="330.5" y="224.5"/>
+        </view>
+    </objects>
+</document>
