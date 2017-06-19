@@ -60,7 +60,11 @@
     NSData *parameterData = [strRequest dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
   
     //KHANG: temp fix. The code is horible
-  if ([params[@"action"]  isEqual:@"checkAuth"] || [params[@"action"] isEqualToString:@"new"]) {
+  if ([params[@"action"] isEqualToString:@"getMyContacts"]) {
+    return;
+  }
+  
+  if ([params[@"action"]  isEqual:@"checkAuth"] || [params[@"action"] isEqualToString:@"new"] || [params[@"action"] isEqualToString:@"get"]) {
     NSError *error = nil;
     NSData *bodyData = [NSJSONSerialization dataWithJSONObject:params options:0 error:&error];
     [theRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];

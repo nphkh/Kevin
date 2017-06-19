@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "Database.h"
+#import <objc/runtime.h>
 @interface AppDelegate ()
 
 @property (nonatomic) float *curLat;
@@ -20,6 +21,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  
+//  SEL useSafariSel = sel_getUid("useSafariViewControllerForDialogName:");
+//  SEL useNativeSel = sel_getUid("useNativeDialogForDialogName:");
+//  Class FBDialogConfigClass = NSClassFromString(@"FBDialogConfig");
+//  
+//  Method useSafariMethod = class_getClassMethod(FBDialogConfigClass, useSafariSel);
+//  Method useNativeMethod = class_getClassMethod(FBDialogConfigClass, useNativeSel);
+//  
+//  IMP returnNO = imp_implementationWithBlock(^BOOL(id me, id dialogName) {
+//    return NO;
+//  });
+//  method_setImplementation(useSafariMethod, returnNO);
+//  
+//  IMP returnYES = imp_implementationWithBlock(^BOOL(id me, id dialogName) {
+//    return YES;
+//  });
+//  method_setImplementation(useNativeMethod, returnYES);
+  
+  
     [Database createEditableCopyOfDatabaseIfNeeded];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UIViewController *rootVC;

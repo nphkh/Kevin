@@ -811,6 +811,10 @@
 
 -(void)callWebserviceForGetMyContactList:(NSString *)contact_Id
 {
+  IntroPageViewController *vcIntro=[self.storyboard instantiateViewControllerWithIdentifier:@"IntroPageViewController"];
+  [self.navigationController pushViewController:vcIntro animated:YES];
+  return;
+  
     if ([self isNetworkReachable])
     {
         [self showHud];
